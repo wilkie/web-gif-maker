@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dejavu-sans/css/dejavu-sans.css">
+    <title>GIF Generator</title>
+  </head>
+  <body>
+    <div class="scratch">
+    </div>
+    <div class="output">
+      <div class="input-panel">
+        <input type="file" multiple></input>
+        <ol class="subtitles">
+        </ol>
+      </div>
+      <ol class="gifs">
+        <template>
+          <li class="widget">
+            <input class="start"></input>
+            <input class="end"></input>
+            <button class="rewindStart"></button>
+            <button class="rewindEnd"></button>
+            <button class="forwardStart"></button>
+            <button class="forwardEnd"></button>
+            <button class="biggen"></button>
+            <button class="smallen"></button>
+            <button class="normen"></button>
+            <button class="remove"></button>
+            <!--<button class="concat"></button>-->
+            <button class="generate"></button>
+            <textarea>
+            </textarea>
+          </li>
+        </template>
+      </ol>
+    </div>
+    <pre class="console">
+    </pre>
+    <script src="app.js"></script>
+  </body>
+</html>

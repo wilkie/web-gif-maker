@@ -1,0 +1,249 @@
+html, body {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  margin:  0;
+  padding: 0;
+
+  overflow: hidden;
+}
+
+input[type=file] {
+  cursor: pointer;
+  height: 50px;
+  flex:   0 0 auto;
+  width:  100%;
+  border-bottom: 1px solid #ddd;
+}
+
+.scratch {
+  position: absolute;
+  z-index: 1;
+  width: 1px;
+  max-width: 1px;
+  left: -100px;
+  overflow: hidden;
+}
+
+.output {
+  border-top:    1px solid #888;
+  border-bottom: 1px solid #000;
+  flex:          1 1 auto;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.output .input-panel {
+  flex: 0 0 auto;
+  width: 30%;
+  min-width: 100px;
+  max-width: 425px;
+  overflow: hidden;
+}
+
+.output .subtitles {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: auto;
+  height: calc(100% - 50px);
+}
+
+.output .subtitles li {
+  padding: 10px;
+  font: 300 16px Lato;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.output .subtitles li:hover {
+  background-color: #ddd;
+}
+
+.output .gifs {
+  margin: 0;
+  padding: 0;
+  flex: 1 1 auto;
+  overflow:      auto;
+
+  background-image: url('noise_black.png');
+}
+
+.output .gifs li {
+  display: inline-block;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+
+  border: 1px solid #333;
+  box-shadow: 0px 0px 2px 2px black;
+
+  background-color: #282828;
+
+  text-align: left;
+  vertical-align: top;
+}
+
+.output .gifs li button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  background-color: #444;
+  padding: 0;
+  margin: 0;
+}
+
+.output .gifs li button:hover {
+  background-color: #666;
+}
+
+.output .gifs li button.rewindStart {
+  position: absolute;
+  left: 0;
+  top: 21px;
+  width: 20px;
+  height: calc(50% - 12px);
+}
+.output .gifs li button.forwardStart {
+  position: absolute;
+  left: 0;
+  top: calc(50% - 11px + 21px);
+  bottom: 0px;
+  width: 20px;
+  height: calc(50% - 11px);
+}
+
+/*
+.output .gifs li button.rewindEnd {
+  position: absolute;
+  left: 0;
+  top: 21px;
+  bottom: 0px;
+  width: 20px;
+  height: calc(100% - 21px);
+}
+.output .gifs li button.forwardEnd {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  bottom: 0px;
+  height: calc(100% - 21px);
+  width: 20px;
+}*/
+.output .gifs li button.rewindEnd {
+  position: absolute;
+  right: 0;
+  top: 21px;
+  width: 20px;
+  height: calc(50% - 12px);
+}
+.output .gifs li button.forwardEnd {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 11px + 21px);
+  bottom: 0px;
+  width: 20px;
+  height: calc(50% - 11px);
+}
+
+.output .gifs li button.smallen {
+  position: absolute;
+  left: -17px;
+  top: -15px;
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  border: 1px solid #333;
+}
+
+.output .gifs li button.normen {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+
+.output .gifs li button.biggen {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.output .gifs li button.remove {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 20px;
+  height: 20px;
+}
+
+.output .gifs li button.generate {
+  position: absolute;
+  right: calc(50% - 20px);
+  top: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.output .gifs li textarea {
+  position: absolute;
+  left: 21px;
+  right: 21px;
+  width: calc(100% - 42px);
+  height: 3.5em;
+  bottom: 0px;
+  resize: none;
+  text-align: center;
+  background: transparent;
+  border: none;
+  background: #282828;
+  border-top: 1px solid transparent;
+}
+
+.output .gifs li input {
+  position: absolute;
+  top: 21px;
+  background: #444;
+  color: #111;
+  width: calc(50% - 42px);
+  border: none;
+  outline: none;
+  font: 300 16px Lato;
+  height: 2em;
+  text-align:center;
+}
+.output .gifs li input.start {
+  left: 40px;
+}
+.output .gifs li input.end {
+  right: 40px;
+}
+
+.output .gifs li img {
+  position: absolute;
+}
+
+.output .gifs li button + textarea {
+  border-top-color: #222;
+}
+
+pre.console {
+  display: none;
+  background: #333;
+  color:      #eee;
+  flex:       0 0 auto;
+  height:     200px;
+  margin:     0;
+  overflow:   auto;
+}
