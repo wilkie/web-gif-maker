@@ -234,7 +234,7 @@ if (input) {
     if (indexFile) {
     }
     ffmpeg(fileList,
-           ["-hide_banner", "-i", "/input/" + videoFile.name].concat(subtitleArgs).concat(["-map", "0:s:0", "-f", "srt", "-"]),
+           ["-hide_banner", "-i", "/input/" + subtitleFile.name].concat(subtitleArgs).concat(["-map", "0:s:0", "-f", "srt", "-"]),
            function(outputs) {
            },
            function(stdout) {
