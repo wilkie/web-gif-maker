@@ -13,6 +13,10 @@ cd ffmpeg.js
 emmake ffmpeg-worker-gif.js
 ```
 
+Then copy the ffmpeg-worker-gif.js into the root of this repository.
+
+You can also just get the ffmpeg-worker-gif.js from the `gh-pages` branch of this repository.
+
 Run a static server:
 
 ```
